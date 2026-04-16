@@ -1,0 +1,80 @@
+paths:
+  raw_csv: data/Gold-Silver-GeopoliticalRisk_HistoricalData.csv
+  processed_parquet: data/processed.parquet
+  models_dir: models
+  reports_dir: reports
+columns:
+  date_candidates:
+  - Date
+  - date
+  - DATE
+  - observation_date
+  gold_candidates:
+  - GOLD_PRICE
+  - Gold_Price
+  - Gold Price
+  - gold
+  - Gold
+  - Gold_USD
+  - XAU
+  silver_candidates:
+  - SILVER_PRICE
+  - Silver_Price
+  - Silver Price
+  - silver
+  - Silver
+  - Silver_USD
+  - XAG
+  gpr_candidates:
+  - GPRD
+  - GPR
+  - gpr
+  - GPR_Index
+  - GPRH
+  - GPR_HIST
+  gpr_act_candidates:
+  - GPRD_ACT
+  - GPRA
+  - GPR_ACT
+  - gpr_act
+  gpr_threat_candidates:
+  - GPRD_THREAT
+  - GPRT
+  - GPR_THREAT
+  - gpr_threat
+features:
+  lags:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 10
+  - 20
+  - 60
+  rolling_windows:
+  - 5
+  - 20
+  - 60
+  use_returns: true
+  use_log_prices: true
+split:
+  test_size_months: 24
+  n_cv_splits: 5
+target:
+  asset: gold
+  horizon_days: 20
+  mode: return
+tuning:
+  n_trials: 60
+  timeout_sec: 900
+  direction: minimize
+  seed: 42
+lstm:
+  seq_len: 60
+  hidden: 64
+  layers: 2
+  dropout: 0.2
+  epochs: 40
+  batch_size: 64
+  lr: 0.001
+  patience: 6

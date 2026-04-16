@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite both the underlying GPR index and this repository."
+title: "Gold & Silver Price Forecasting under Geopolitical Risk"
+type: software
+authors:
+  - family-names: "Mmaladza"
+    given-names: ""
+repository-code: "https://github.com/Mmaladza/gold-silver-gpr-forecast"
+license: MIT
+version: "0.1.0"
+date-released: "2026-04-15"
+keywords:
+  - machine-learning
+  - time-series-forecasting
+  - geopolitical-risk
+  - xgboost
+  - lstm
+  - optuna
+references:
+  - type: article
+    authors:
+      - family-names: Caldara
+        given-names: Dario
+      - family-names: Iacoviello
+        given-names: Matteo
+    title: "Measuring Geopolitical Risk"
+    journal: "American Economic Review"
+    volume: "112"
+    issue: "4"
+    year: 2022
+    start: 1194
+    end: 1225
+    url: "https://www.matteoiacoviello.com/gpr.htm"
+  - type: data
+    authors:
+      - family-names: Dangi
+        given-names: Shreyansh
+    title: "Gold-Silver Price vs Geopolitical Risk (1985-2025)"
+    year: 2025
+    url: "https://www.kaggle.com/datasets/shreyanshdangi/gold-silver-price-vs-geopolitical-risk-19852025"
