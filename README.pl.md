@@ -2,7 +2,6 @@
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![CI](https://github.com/Mmaladza/gold-silver-gpr-forecast/actions/workflows/ci.yml/badge.svg)](./.github/workflows/ci.yml)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 
 > 🇬🇧 English version: [README.md](README.md)
